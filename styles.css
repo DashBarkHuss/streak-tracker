@@ -1,0 +1,22 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    top: 20%;
+    position: relative;
+    justify-content: center;
+}
+*{
+    box-sizing: border-box; 
+    border: 1px solid red;
+}
+.tracker{
+    height: 100px;;
+    width: 100px;;
+}
