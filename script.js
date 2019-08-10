@@ -1,11 +1,11 @@
 class Tracker{
-    constructor(start, activity){
-        this.start = start;
+    constructor(activity, startDate){
+        this.startDate = startDate;
         this.activity = activity;
     };
 
     getStreak(){
-        return Math.ceil(((Date.now() - this.start)/1000/60/60/24))
+        return Math.ceil(((Date.now() - this.startDate)/1000/60/60/24))
     }
 
     getStatement(){
@@ -13,14 +13,19 @@ class Tracker{
     }
 }
 
-const workoutStartDate = new Date(2017, 11, 20);
-const ketoStartDate = new Date(2016, 11, 17);
-const mathStartDate = new Date(2019, 3, 24);
-const meditationStartDate = new Date(2019, 2, 18);
-const codingStartDate = new Date(2019, 0, 1);
+const streaks = [
+    {activity: "working out", date: new Date(2017, 11, 20)},
+    {activity: "eating keto without cheating", date: new Date(2016, 11, 17)},
+    {activity: "math", date: new Date(2019, 3, 24)},
+    {activity: "meditating", date: new Date(2019, 2, 18)},
+    {activity: "coding", date: new Date(2019, 0, 1)}
+]
 
-let workoutTracker = new Tracker(workoutStartDate, "working out");
-let ketoTracker = new Tracker(ketoStartDate, "eating keto without cheating");
-let mathTracker = new Tracker(mathStartDate, "math");
-let meditationTracker = new Tracker(meditationStartDate, "meditating");
-let codingTracker = new Tracker(codingStartDate, "coding");
+
+streaks.forEach(
+    (el)=>{
+        el.tracker = new Tracker(el.activity, el.date)
+    }
+);
+  
+streaks.sort((a,b)=>(b.tracker.getStreak()-a.tracker.getStreak()))
