@@ -18,7 +18,10 @@ const streaks = [
     {activity: "eating keto without cheating", date: new Date(2016, 11, 17)},
     {activity: "math", date: new Date(2019, 3, 24)},
     {activity: "meditating", date: new Date(2019, 2, 18)},
-    {activity: "coding", date: new Date(2019, 0, 1)}
+    {activity: "coding", date: new Date(2019, 0, 1)},
+    {activity: "no caffeine", date: new Date(2019, 6, 8)},
+    {activity: "getting to bed by 11pm", date: new Date(2019, 6, 20)}, //start 19/20th, broke this on aug 9/10
+    {activity: "food tracking", date: new Date(2018, 3, 7)}
 ]
 
 
