@@ -7,3 +7,18 @@ streaks.forEach((el)=>{
     tracker.classList += "tracker";
     gridContainer.appendChild(tracker);
 });
+
+const setTrackerHeight = function(){
+    const trackers = document.getElementsByClassName('tracker');
+    const width = trackers[0].offsetWidth;
+    for (i = 0; i<trackers.length; i ++){
+        console.log("w: ", width + 'px');
+        trackers[i].style.height = width + 'px';
+        console.log('h:',trackers[i].style.height);
+    }
+}
+
+
+window.onresize = setTrackerHeight;
+
+setTrackerHeight();

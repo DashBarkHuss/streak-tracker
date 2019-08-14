@@ -31,7 +31,7 @@ html, body{
 }
 .grid-container{
     display: grid;
-    grid-template-columns: repeat(4, 100px);
+    grid-template-columns: repeat(4, 20%);
     grid-template-rows: auto;
     grid-gap: 40px;
     top: 20%;
@@ -43,8 +43,6 @@ html, body{
     /* border: 1px solid red; */
 }
 .tracker{
-    height: 130px;
-    width: 130px;
     border: 1px solid var(--accent2-color);
     border-radius: 50%;
     background-color: var(--light-accent2-color);
